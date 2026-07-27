@@ -66,7 +66,7 @@ int vsystem(const char *fmt, ...)
     if (n < 0 || n >= sizeof(cmd))
         return -1;
 
-    fprintf(stderr, "%s: executing cmd: %s\n", __FUNCTION__, cmd);
+    fprintf(stderr, "%s: [v2] executing cmd: %s\n", __FUNCTION__, cmd);
     return system(cmd);
 }
 
