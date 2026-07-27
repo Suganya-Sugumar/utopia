@@ -120,7 +120,7 @@ int iface_get_hwaddr(const char *ifname, char *mac, size_t size)
 	{
 		if (ENODEV == errno)
        	{
-        	fprintf(stderr, "%s interface is not present, cannot get MAC Address\n", ifname);
+        	fprintf(stderr, "%s interface is not present, cannot get MAC Address (errno=%d)\n", ifname, errno);
         }
         else
         {
