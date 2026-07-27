@@ -147,7 +147,7 @@ int iface_get_ipv4addr (const char *ifname, char *ipv4Addr, size_t size)
 
     if (!ifname || !ipv4Addr || size < sizeof("000.000.000.000"))
 	{
-		fprintf(stderr, "Invalid input parameters for iface_get_ipv4addr function !!!\n");
+		fprintf(stderr, "Invalid input parameters for iface_get_ipv4addr: ifname or ipv4Addr is NULL\n");
         return -1; 
 	}
 
