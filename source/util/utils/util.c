@@ -153,7 +153,7 @@ int iface_get_ipv4addr (const char *ifname, char *ipv4Addr, size_t size)
 
     if ((l_iSock_Fd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) 
 	{
-		fprintf(stderr, "Error opening socket while getting the IPv4 Address of interface:%s\n", ifname);
+		fprintf(stderr, "Error opening socket for IPv4 address lookup on interface: %s (errno=%d)\n", ifname, errno);
         return -1; 
     }
 
